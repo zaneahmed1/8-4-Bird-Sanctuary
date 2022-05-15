@@ -1,7 +1,14 @@
+import React from "react"
+import BirdCards from "./Components/BirdCards"
+import Cart from "./Components/Cart"
+import Checkout from "./Components/Checkout"
+
 const App = () => {
   return (
     <div>
-      <h1>Hello, world!</h1>
+    <BirdCards />
+    <Cart />
+    <Checkout />
     </div>
   );
 };
