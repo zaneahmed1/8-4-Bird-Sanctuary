@@ -16,7 +16,7 @@ const Checkout = () => {
             <label for="zipcode">Zip Code</label>
             <input type="number" name="zipcode" id="zipcode"></input>
             <br></br>
-            <button type="submit" onClick={thankYou}>Submit</button>
+            <input type="submit" onClick={thankYou}></input>
         </form>
     )
 }
