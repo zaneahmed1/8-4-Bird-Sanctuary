@@ -6,7 +6,7 @@ import birdData from "../data/birds";
 const BirdCards = () => {
 
     return(
-        <ul>
+        <ul className="birds">
         {birdData.map(({img, amount, name, id})=> {
             return(
                 <li key={id}>
