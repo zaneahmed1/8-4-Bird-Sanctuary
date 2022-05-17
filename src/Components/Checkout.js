@@ -5,6 +5,7 @@ const Checkout = () => {
         alert(`You have adopted birds. Thank you!`)
 
     }
+
     return (
         <form id="checkout">
             <label for="First">First Name</label>
@@ -18,7 +19,8 @@ const Checkout = () => {
             <br></br>
             <input type="submit" onClick={thankYou}></input>
         </form>
-    )
+    );
+    
 }
 
 export default Checkout

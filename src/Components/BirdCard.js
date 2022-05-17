@@ -6,7 +6,7 @@ const BirdCard = ({ img, name, amount, setCart, cart }) => {
 
     const handleClick = () => {
         setCart([...cart, {name, amount}])
-        //debugger
+        debugger
     }
 
         return(
