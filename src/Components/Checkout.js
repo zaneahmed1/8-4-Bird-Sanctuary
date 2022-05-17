@@ -7,7 +7,7 @@ const Checkout = () => {
     }
 
     return (
-        <form id="checkout">
+        <form className="Checkout">
             <label for="First">First Name</label>
             <input type="text" name="First" id="First"></input>
             <label for="Last">Last Name</label>

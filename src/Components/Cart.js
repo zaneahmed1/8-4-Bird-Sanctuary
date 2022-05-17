@@ -23,21 +23,21 @@ const Cart = ({ cart }) => {
     if (cart.length >= 3) {
       return (totalAmount *= 0.9), (<h4 id="discount">Discount: 10%</h4>);
     } else {
-      return <h4>Discount : 0%</h4>;
+      return <h4>Discount: 0%</h4>;
     }
   };
 
   const bonuses = () => {
-    if (totalAmount > 100 && totalAmount <= 300) {
+    if (totalAmount >= 100 && totalAmount <= 299) {
       return <li>{bonusItems[0]}</li>;
-    } else if (totalAmount >= 301 && totalAmount <= 500) {
+    } else if (totalAmount >= 300 && totalAmount <= 499) {
       return (
         <>
           <li>{bonusItems[0]}</li>
           <li>{bonusItems[1]}</li>
         </>
       );
-    } else if (totalAmount >= 501 && totalAmount <= 1000) {
+    } else if (totalAmount >= 500 && totalAmount <= 999) {
       return (
         <>
           <li>{bonusItems[0]}</li>
