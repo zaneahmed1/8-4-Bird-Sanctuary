@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import bonusItems from "../data/bonusItems";
 //import BirdCard from "./BirdCard";
 
 const Cart = ({ cart }) => {
@@ -26,6 +27,36 @@ const Cart = ({ cart }) => {
     }
   };
 
+  const bonuses = () => {
+    if (totalAmount > 100 && totalAmount <= 300) {
+      return <li>{bonusItems[0]}</li>;
+    } else if (totalAmount >= 301 && totalAmount <= 500) {
+      return (
+        <>
+          <li>{bonusItems[0]}</li>
+          <li>{bonusItems[1]}</li>
+        </>
+      );
+    } else if (totalAmount >= 501 && totalAmount <= 1000) {
+        return (
+          <>
+            <li>{bonusItems[0]}</li>
+            <li>{bonusItems[1]}</li>
+            <li>{bonusItems[2]}</li>
+          </>
+        );
+      } else if (totalAmount > 1000) {
+        return (
+          <>
+            <li>{bonusItems[0]}</li>
+            <li>{bonusItems[1]}</li>
+            <li>{bonusItems[2]}</li>
+            <li>{bonusItems[3]}</li>
+          </>
+        );
+      }
+  };
+
   return (
     <div className="Cart">
       <ol id="basket">
@@ -39,7 +70,10 @@ const Cart = ({ cart }) => {
       </ol>
       {discountCheck()}
       <h4>Total: ${totalAmount} </h4>
-      <ol>Bonus items go here</ol>
+      <ul>
+        Bonus items go here
+        {bonuses()}
+      </ul>
     </div>
   );
 };
