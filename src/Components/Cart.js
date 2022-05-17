@@ -72,6 +72,7 @@ const Cart = ({ cart }) => {
       </ol>
       {discountCheck()}
       <h4>Total: ${totalAmount} </h4>
+      <p>Your generosity has earned you the following bonuses!</p>
       <ul>{bonuses()}</ul>
     </div>
   );
