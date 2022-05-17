@@ -5,8 +5,9 @@ const Checkout = () => {
         alert(`You have adopted birds. Thank you!`)
 
     }
+
     return (
-        <form id="checkout">
+        <form className="Checkout">
             <label for="First">First Name</label>
             <input type="text" name="First" id="First"></input>
             <label for="Last">Last Name</label>
@@ -16,9 +17,10 @@ const Checkout = () => {
             <label for="zipcode">Zip Code</label>
             <input type="number" name="zipcode" id="zipcode"></input>
             <br></br>
-            <button type="submit" onClick={thankYou}>Submit</button>
+            <input type="submit" onClick={thankYou}></input>
         </form>
-    )
+    );
+    
 }
 
 export default Checkout

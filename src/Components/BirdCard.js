@@ -6,11 +6,11 @@ const BirdCard = ({ img, name, amount, setCart, cart }) => {
 
     const handleClick = () => {
         setCart([...cart, {name, amount}])
-        //debugger
+        debugger
     }
 
         return(
-            <div class="birds">
+            <div class="card">
                 <h2>{name}</h2>
                 <p>Price: ${amount}</p>
                 <img src= {img} alt={name}></img>
