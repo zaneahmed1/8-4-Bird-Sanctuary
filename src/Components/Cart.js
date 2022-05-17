@@ -38,23 +38,23 @@ const Cart = ({ cart }) => {
         </>
       );
     } else if (totalAmount >= 501 && totalAmount <= 1000) {
-        return (
-          <>
-            <li>{bonusItems[0]}</li>
-            <li>{bonusItems[1]}</li>
-            <li>{bonusItems[2]}</li>
-          </>
-        );
-      } else if (totalAmount > 1000) {
-        return (
-          <>
-            <li>{bonusItems[0]}</li>
-            <li>{bonusItems[1]}</li>
-            <li>{bonusItems[2]}</li>
-            <li>{bonusItems[3]}</li>
-          </>
-        );
-      }
+      return (
+        <>
+          <li>{bonusItems[0]}</li>
+          <li>{bonusItems[1]}</li>
+          <li>{bonusItems[2]}</li>
+        </>
+      );
+    } else if (totalAmount > 1000) {
+      return (
+        <>
+          <li>{bonusItems[0]}</li>
+          <li>{bonusItems[1]}</li>
+          <li>{bonusItems[2]}</li>
+          <li>{bonusItems[3]}</li>
+        </>
+      );
+    }
   };
 
   return (
@@ -62,18 +62,17 @@ const Cart = ({ cart }) => {
       <ol id="basket">
         {cart.map(({ name, amount }) => {
           return (
-            <li>
-              {name} - {amount}
-            </li>
+            <>
+              <li>
+                {name} - ${amount}
+              </li>
+            </>
           );
         })}
       </ol>
       {discountCheck()}
       <h4>Total: ${totalAmount} </h4>
-      <ul>
-        Bonus items go here
-        {bonuses()}
-      </ul>
+      <ul>{bonuses()}</ul>
     </div>
   );
 };
