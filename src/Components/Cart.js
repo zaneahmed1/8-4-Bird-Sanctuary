@@ -57,19 +57,22 @@ const Cart = ({ cart }) => {
     }
   };
 
+  const cartItem = () => {
+    return cart.map(({ name, amount }) => {
+      return (
+        <>
+          <li>
+            {name} - ${amount}
+            <button> Toss Aside </button>
+          </li>
+        </>
+      );
+    });
+  };
+
   return (
     <div className="Cart">
-      <ol id="basket">
-        {cart.map(({ name, amount }) => {
-          return (
-            <>
-              <li>
-                {name} - ${amount}
-              </li>
-            </>
-          );
-        })}
-      </ol>
+      <ol id="basket">{cartItem()}</ol>
       {discountCheck()}
       <h4>Total: ${totalAmount} </h4>
       <p>Your generosity has earned you the following bonuses!</p>
