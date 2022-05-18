@@ -9,8 +9,8 @@ const Cart = ({cart}) => {
     
     const [deleteButton, setDeleteButton] = useState(cart)
 
-    const handleDeleteButton = (index) => {
-        setDeleteButton(deleteButton.splice(index, 1))
+    const handleDeleteButton = (i) => {
+        setDeleteButton(cart)
     }
 
 
@@ -61,15 +61,16 @@ const Cart = ({cart}) => {
 
     return (
         <div className="Cart">
-            <ol>
-            {cart.map(({name, amount})=>{
+              <h4>Cart</h4>     
+            <ol id="orderedList">
+            {cart.map(({name, amount}, i)=>{
                 return(
-                <li>
+                <li id="listItem">
                     {name} - {amount}
-                <button onClick={handleDeleteButton}>Delete</button>
+                <button id={i} onClick={handleDeleteButton}>Delete</button>
                 </li>
                 )
-            })}       
+            })}  
             </ol>
             {discounts()}
             <h4>Total : ${total} </h4>
