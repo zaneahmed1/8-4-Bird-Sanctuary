@@ -58,12 +58,13 @@ const Cart = ({ cart }) => {
   };
 
   const cartItem = () => {
-    return cart.map(({ name, amount }) => {
+    return cart.map(({ name, amount }, i) => {
+      console.log(i);
       return (
         <>
           <li>
             {name} - ${amount}
-            <button> Toss Aside </button>
+            <button id={i}> Toss Aside </button>
           </li>
         </>
       );
